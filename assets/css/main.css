@@ -8,53 +8,53 @@
 @import "sprite";
 @import "mixins/display-flex";
 
-/*------------------------
+/* ------------------------
 1. Normalize
-------------------------*/
+------------------------ */
 @import "normalize.css";
 
-/*------------------------
+/* ------------------------
 2. Base
-------------------------*/
+------------------------ */
 @import "base/base";
 @import "base/tables";
 @import "base/forms";
 
-/*------------------------
+/* ------------------------
 3. Typography
-------------------------*/
+------------------------ */
 @import "base/typography";
 
-/*------------------------
+/* ------------------------
 4. Icons
-------------------------*/
+------------------------ */
 @import "base/icons";
 
-/*------------------------
+/* ------------------------
 5. Helpers
-------------------------*/
+------------------------ */
 @import "base/helpers";
 
-/*------------------------
+/* ------------------------
 6. Header
-------------------------*/
+------------------------ */
 @import "layout/header";
 @import "components/header-dropdown";
 @import "components/header-search";
 @import "components/accessibility-bar";
 @import "components/cookies-banner";
 
-/*------------------------
+/* ------------------------
 7. Layout
-------------------------*/
+------------------------ */
 @import "layout/sidebar";
 @import "layout/main";
 @import "layout/content";
 @import "layout/footer";
 
-/*------------------------
+/* ------------------------
 8. Components
-------------------------*/
+------------------------ */
 @import "components/alert-box";
 @import "components/authors";
 @import "components/autocomplete";
@@ -73,16 +73,16 @@
 @import "components/topic-message";
 @import "components/user-profile";
 
-/*------------------------
+/* ------------------------
 9. Pages
-------------------------*/
+------------------------ */
 @import "pages/home";
 @import "pages/gallery";
 @import "pages/api";
 @import "pages/tutorial-help";
 @import "pages/tutorial-history";
 
-/*-------------------------
+/* -------------------------
 10. High pixel ratio (retina)
--------------------------*/
+------------------------- */
 @import "base/high-pixel-ratio";
