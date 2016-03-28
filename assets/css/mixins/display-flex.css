@@ -20,7 +20,9 @@
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
-  } @else {
+  }
+
+  @else {
     display: $prop;
   }
 }
@@ -32,18 +34,21 @@
     -moz-box-orient: horizontal;
     -moz-box-direction: normal;
   }
+
   @if $prop == column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -moz-box-orient: vertical;
     -moz-box-direction: normal;
   }
+
   @if $prop == row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -moz-box-orient: horizontal;
     -moz-box-direction: reverse;
   }
+
   @if $prop == column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -57,8 +62,11 @@
 
 @define-mixin align-items $prop {
   $oldprop: $prop;
+
   @if $prop == flex-start { $oldprop: start; }
-  @if $prop == flex-end   { $oldprop: end; }
+
+  @if $prop == flex-end { $oldprop: end; }
+
   -webkit-box-align: $oldprop;
   -moz-box-align: $oldprop;
   -ms-flex-align: $oldprop;
@@ -68,8 +76,11 @@
 
 @define-mixin justify-content $prop {
   $oldprop: $prop;
-  @if $prop == flex-start    { $oldprop: start; }
-  @if $prop == flex-end      { $oldprop: end; }
+
+  @if $prop == flex-start { $oldprop: start; }
+
+  @if $prop == flex-end { $oldprop: end; }
+
   @if $prop == space-between { $oldprop: justify; }
   -webkit-box-pack: $oldprop;
   -moz-box-pack: $oldprop;
