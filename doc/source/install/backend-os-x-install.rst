@@ -1,24 +1,39 @@
 =================================
-Installation du backend sous OS X
+Installation sous OS X
 =================================
 
 Pour installer une version locale de ZdS sur OS X, veuillez suivre les instructions suivantes.
-Si une commande ne passe pas, essayez de savoir pourquoi avant de continuer.
+
+.. note::
+  - Si une commande échoue, essayez de savoir pourquoi avant de continuer.
+  - Si vous voulez savoir ce qui se cache derrière une commande ``make``, ouvrez le fichier nommé ``Makefile`` présent à la racine du projet.
+  - Si une erreur s'est glissée dans la doc, ou si la doc a glissé vers l'obscolescence, ouvrez `un ticket sur notre repo github <https://github.com/zestedesavoir/zds-site/issues/new>`_
+  - Si malgré tout vous ne parvenez pas à installer ZdS, n'hésitez pas à ouvrir `un sujet sur le forum <https://zestedesavoir.com/forums/sujet/nouveau/?forum=2>`_
+
+
+Pré-requis
+==========================
 
 Avant de vous lancez dans l'installation de l'environnement de zds, il faut quelques pré-requis :
 
 - Installer `XCode <http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12>`_ pour pouvoir exécuter des commandes (g)cc.
 - Installer `Homebrew <http://brew.sh/>`_ pour récupérer certains paquets utiles pour l'installation des dépendances de ce projet.
-- Installer python 2.7
+- Installer `python 2.7 <https://www.python.org/downloads/mac-osx/>`_
 - Installer pip
-- Installer git
+- Installer `git <https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Installation-de-Git#Installation-sur-Mac>`_
 - Installer `gettext <https://www.gnu.org/software/gettext/>`_
 - Installer GeoIP (``brew install geoip``)
 
+Après avoir tout installé :
+
+- Cloner le dépôt ZdS (voir `la documentation dédiée <clone-repository.html>`_)
+- Placez-vous dans le répertoire zds-site (``cd zds-site/``)
+
 Une fois les pré-requis terminés, vous pouvez vous lancer dans l'installaton de l'environnement de zds.
 
-Installation de virtualenv
-==========================
+
+Installation de virtualenv et de l'environnement
+==================================================
 
 .. sourcecode:: bash
 
@@ -29,12 +44,24 @@ Installation de virtualenv
     echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile && source /usr/local/bin/virtualenvwrapper.sh
 
 
-Création de votre environnement
-===============================
+Création de votre environnement :
 
 .. sourcecode:: bash
 
     mkvirtualenv zdsenv
+
+**À chaque fois** que vous souhaitez travailler dans votre environnement, activez-le via la commande suivante :
+
+.. sourcecode:: bash
+
+    source ~/.virtualenvs/zdsenv/bin/activate
+
+Si vous avez installé virtualenvwrapper, vous pouvez utiliser le raccourcis ``workon zdsenv``.
+
+Pour sortir de votre environnement, tapez ``deactivate``
+
+.. note::
+  Une documentation plus complète de cet outil `est disponible ici <http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvwrapper>`_.
 
 
 Récupération de cairo (svg)
@@ -46,13 +73,10 @@ Récupération de cairo (svg)
   brew install py2cairo # py3cairo quand ZdS sera en python 3
 
 
-Installation des outils front-end
-=================================
-
-Il vous faut installer les outils du front-end. Pour cela, rendez-vous sur `la documentation dédiée <frontend-install.html>`_.
-
 Installation de toutes les dépendances
 ======================================
+
+Une fois dans votre environnement python (``source ../bin/activate`` si vous utilisez virtualenv, très fortement conseillé), installez les dépendances :
 
 .. sourcecode:: bash
 
@@ -60,16 +84,16 @@ Installation de toutes les dépendances
   make install-front
 
 
-Pour relancer votre environnement : ``source ~/.virtualenvs/zdsenv/bin/activate``.
+Installation des outils front-end
+=================================
 
-Si vous avez installé virtualenvwrapper, vous pouvez utiliser le raccourcis ``workon zdsenv``.
+Il vous faut installer les outils du front-end. Pour cela, rendez-vous sur `la documentation dédiée <frontend-install.html>`_.
 
-Pour sortir de votre environnement : ``deactivate``.
 
 Lancer ZdS
 ==========
 
-Une fois dans votre environnement python et toutes les dépendances installées, lançons ZdS :
+Une fois dans votre environnement python (``source ../bin/activate`` si vous utilisez virtualenv, très fortement conseillé) et toutes les dépendances installées, lançons ZdS :
 
 .. sourcecode:: bash
 
