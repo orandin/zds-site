@@ -1,6 +1,6 @@
-====================================
-Installation du backend sous Windows
-====================================
+==========================
+Installation sous Windows
+==========================
 
 -----------
 
@@ -12,13 +12,20 @@ Installation du backend sous Windows
 
 
 Pour installer une version locale de ZdS sur Windows, veuillez suivre les instructions suivantes.
-Si une commande ne passe pas, essayez de savoir pourquoi avant de continuer.
 
 Il est conseillé de lancer à chaque fois PowerShell en administrateur pour les étapes suivantes et choisissez un répertoire pour le zds par exemple :
 
 .. sourcecode:: none
 
     cd C:\dev\zestedesavoir
+
+.. note::
+  - Si une commande échoue, essayez de savoir pourquoi avant de continuer.
+  - Si une erreur s'est glissée dans la doc, ou si la doc a glissé vers l'obscolescence, ouvrez `un ticket sur notre repo github <https://github.com/zestedesavoir/zds-site/issues/new>`_
+  - Si malgré tout vous ne parvenez pas à installer ZdS, n'hésitez pas à ouvrir `un sujet sur le forum <https://zestedesavoir.com/forums/sujet/nouveau/?forum=2>`_
+
+
+
 
 Prérequis
 =========
@@ -44,7 +51,7 @@ Prérequis
     - ``set $env:WORKON_HOME``
     - ``Import-Module virtualenvwrapper``, *la console PowerShell pourrait hurler à cette commande, mais normalement ça passe, en cas de deuxième essai vous ne devriez plus avoir d'erreur*.
     - ``New-VirtualEnvironment zdsenv --no-site-packages``
-- Clonez le dépot git *via la console git* (et pas via powershell) windows: ``git clone https://github.com/zestedesavoir/zds-site.git``
+- Clonez le dépot git *via la console git* (et pas via powershell) windows (voir `la documentation dédié <clone-repository.html>`_)
 
 (?) Si vous avez ``(zdsenv)`` à gauche de la zone de saisie, c'est que vous êtes dans l'environnement *zdsenv*.
 
